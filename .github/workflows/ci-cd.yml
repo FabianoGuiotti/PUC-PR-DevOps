@@ -26,6 +26,24 @@ jobs:
       - name: Executar Testes Unitarios
         run: npm test
 
+      - name: Notificar Sucesso nos Testes no Discord
+        if: success()
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          title: "CI: Testes Unitários Aprovados! ✅"
+          description: "Os 5 testes unitários passaram com sucesso na branch ${{ github.ref_name }}."
+          color: 0x00FF00
+
+      - name: Notificar Falha nos Testes no Discord
+        if: failure()
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          title: "CI: Falha nos Testes Unitários! ❌"
+          description: "Ocorreu um erro durante a execução dos testes."
+          color: 0xFF0000
+
   deploy:
     name: Continuous Delivery (CD)
     needs: build-and-test
@@ -38,3 +56,12 @@ jobs:
 
       - name: Validar Build e Entrega
         run: echo "Build e entrega validados com sucesso no pipeline de CD!"
+
+      - name: Notificar Deploy/CD no Discord
+        if: success()
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          title: "CD: Pipeline Concluído com Sucesso! 🚀"
+          description: "Deploy/Entrega contínua validada para a Pull Request ou Branch Main."
+          color: 0x0099FF
