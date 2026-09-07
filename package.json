@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "<<<<<<< HEAD\r # Jogo da Memoria - Protecao contra Golpes\r =======\r # PUC-PR-DevOps\r Repositorio para Materia DevOps da PUC-PR\r >>>>>>> 5c9b91ed04ac5b1086a4e8958203ef8e1f5b1725",
   "main": "gameLogic.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "scripts": {
+    "test": "jest"
   },
   "repository": {
     "type": "git",
