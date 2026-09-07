@@ -1,0 +1,23 @@
+{
+  "name": "jogo-memoria-seguranca",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD\r # Jogo da Memoria - Protecao contra Golpes\r =======\r # PUC-PR-DevOps\r Repositorio para Materia DevOps da PUC-PR\r >>>>>>> 5c9b91ed04ac5b1086a4e8958203ef8e1f5b1725",
+  "main": "gameLogic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabianoGuiotti/PUC-PR-DevOps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabianoGuiotti/PUC-PR-DevOps/issues"
+  },
+  "homepage": "https://github.com/FabianoGuiotti/PUC-PR-DevOps#readme",
+  "devDependencies": {
+    "jest": "^30.5.1"
+  }
+}
