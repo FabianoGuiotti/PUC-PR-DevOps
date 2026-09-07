@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória - Proteção contra Golpes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header>
+      <h1>Proteção contra Golpes</h1>
+      <p>Encontre os 8 pares de segurança digital</p>
+      <div class="status-bar">
+        <span>Tentativas: <strong id="moves">0</strong></span>
+        <span>Acertos: <strong id="matches">0/8</strong></span>
+        <button id="restart-btn">Reiniciar</button>
+      </div>
+    </header>
+    <section class="grid" id="grid"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
